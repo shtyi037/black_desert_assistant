@@ -6,6 +6,8 @@ from config import config as cnf
 class color_srv():
 
     def __init__(self, w_count=0, r_count=0, y_count=0, b_count=0):
+
+        self.C_count = 0
         self.w_count = w_count
         self.r_count = r_count
         self.y_count = y_count
@@ -129,8 +131,8 @@ class color_srv():
 
 
 if __name__ == "__main__":
-    import tkinter as tk
+    # import tkinter as tk
 
-    root = tk.Tk()
+    # root = tk.Tk()
     app = color_srv()
     app.do()

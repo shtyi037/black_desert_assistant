@@ -21,6 +21,6 @@ def create_page(notebook, text):
 
 
 def do_service():
-    root = tk.Tk()
-    app = color_srv(root)
+    # root = tk.Tk()
+    app = color_srv()
     app.do()
