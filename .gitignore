@@ -1,0 +1,4 @@
+# 忽略檔案
+.venv/
+build/*
+dist/*
