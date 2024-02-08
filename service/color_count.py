@@ -1,5 +1,7 @@
 import tkinter as tk
+# from tkinter import ttk
 from config import config as cnf
+
 
 class color_srv():
 
@@ -8,11 +10,11 @@ class color_srv():
         self.r_count = r_count
         self.y_count = y_count
         self.b_count = b_count
+        # self.window = root
         self.init_count()
 
     def init_count(self):
         self.window = tk.Tk()  # 建立主視窗 Frame
-        # self.w_label = tk.Label(self.window, text=self.w_count, bg='#EEBB00', font=('Arial', 12), width=10, height=2)
         self.w_label = tk.Label(self.window, text=self.w_count, font=('Arial', 12), width=5, height=2)
         self.r_label = tk.Label(self.window, text=self.r_count, font=('Arial', 12), width=5, height=2)
         self.y_label = tk.Label(self.window, text=self.y_count, font=('Arial', 12), width=5, height=2)
@@ -87,6 +89,10 @@ class color_srv():
         # 設定視窗大小為 900x500，視窗（左上角）在螢幕上的座標位置為 (450, 250)
         self.window.geometry("700x400+450+250")
 
+        # 创建一个Notebook控件
+        # notebook = ttk.Notebook(self.window)
+        # notebook.pack(fill='both', expand=True)
+
         # 建立按鈕
         button_w = tk.Button(self.window,
                              # text = '黃色V',  # 顯示文字
@@ -121,6 +127,10 @@ class color_srv():
         # 執行主程式
         self.window.mainloop()
 
+
 if __name__ == "__main__":
+    import tkinter as tk
+
+    root = tk.Tk()
     app = color_srv()
     app.do()
