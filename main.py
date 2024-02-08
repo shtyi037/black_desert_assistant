@@ -1,4 +1,4 @@
-from service import service_start_up
+from service import service_startup
 
 if __name__ == '__main__':
-    service_start_up.do_service()
+    service_startup.do_service()
