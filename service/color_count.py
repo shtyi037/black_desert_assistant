@@ -1,5 +1,5 @@
 import tkinter as tk
-
+from config import config as cnf
 
 class color_srv():
 
@@ -83,7 +83,7 @@ class color_srv():
             self.b_label["font"] = ('Arial', 20)
 
     def do(self):
-        self.window.title('ColorCount')  # 設定視窗標題
+        self.window.title(cnf.get("EXE_NAME"))  # 設定視窗標題
         # 設定視窗大小為 900x500，視窗（左上角）在螢幕上的座標位置為 (450, 250)
         self.window.geometry("700x400+450+250")
 
@@ -120,3 +120,7 @@ class color_srv():
         # ttk.Button(self.window, text="開始", command=self.yellow_add).pack()
         # 執行主程式
         self.window.mainloop()
+
+if __name__ == "__main__":
+    app = color_srv()
+    app.do()
